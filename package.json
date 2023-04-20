@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-mdx-remote-hello-world",
+  "name": "gatsby-starter-dfrnt-graphql",
   "private": true,
   "description": "A simplified bare-bones starter for the Gatsby MDX Remote Plugin",
   "version": "0.1.0",
@@ -28,9 +28,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dfrnt-com/gatsby-starter-mdx-remote-hello-world"
+    "url": "https://github.com/dfrnt-com/gatsby-starter-dfrnt-graphql"
   },
   "bugs": {
-    "url": "https://github.com/dfrnt-com/gatsby-starter-mdx-remote-hello-world/issues"
+    "url": "https://github.com/dfrnt-com/gatsby-starter-dfrnt-graphql/issues"
   }
 }

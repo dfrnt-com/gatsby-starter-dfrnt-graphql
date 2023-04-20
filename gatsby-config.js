@@ -4,13 +4,67 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   plugins: [
-    // To be included for sourcing MDX from GraphQL at DFRNT (and elsewhere like TerminusCMS and others)
-    // `@dfrnt/gatsby-source-graphql-nodes`,
+    // Sources MDX from DFRNT data products via GraphQL (and from other GraphQL sources like TerminusCMS)
+    {
+      resolve: "@dfrnt/gatsby-source-graphql-nodes",
+      options: {
+        url: "https://dfrnt.com/api/hosted/RustyGearsInc/api/graphql/RustyGearsInc/website",
+        graphqlConfig: {
+          headers: {
+            Authorization: `Token ${process.env.DFRNT_TOKEN}`,
+          },
+        },
+        query: `{
+          Blogpost {
+            _id
+            _type
+            label
+            statement {
+              markdown
+            }
+            frontmatter {
+              excerpt
+              slug
+              title
+              publishDate
+              updateDate
+              imageList
+              category {
+                label
+              }
+              author {
+                label
+                href
+                imageUrl
+              }
+              og {
+                image
+                title
+                type
+                url
+              }
+            }
+          }
+        }
+        `,
+    
+        typeConfiguration: {
+           "Blogpost": {
+            typeNameOverride: "Blogpost",
+            idField: "_id",
+          },
+        },
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -30,7 +84,7 @@ module.exports = {
       resolve: `gatsby-mdx-remote`,
       options: {
         mdxNodeTypes: {
-          "MyNodeType": {
+          "Blogpost": {
             mdxField: "data.statement.markdown",
             mdxFrontmatterField: "data.frontmatter",
             gatsbyImageClassName: "rounded-md",

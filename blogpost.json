@@ -1,0 +1,25 @@
+{
+  "statement": {
+    "@type": "Markdown",
+    "markdown": "import YoutubeEmbed from \"../../../../src/components/YoutubeEmbed.jsx\"\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\nSome content\n\n```\nAnd some code\n```\n\n<YoutubeEmbed id=\"GuvAMcsoreI\"/>\n\n![Random image](https://images.unsplash.com/photo-1522262139463-236991a708cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80)"
+  },
+  "frontmatter": {
+    "imageList": [
+      "https://images.unsplash.com/photo-1522262139463-236991a708cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80"
+    ],
+    "og": {
+      "@type": "OpenGraphMetadata",
+      "image": "http://localhost:8000/blog/blogpost/image.jpg",
+      "title": "Blogpost example",
+      "type": "website",
+      "url": "http://localhost:8000/blog/blogpost/"
+    },
+    "@type": "Frontmatter",
+    "excerpt": "This is a page summary",
+    "title": "A page about a lot of things",
+    "slug": "blog/blogpost"
+  },
+  "relatedPages": [],
+  "@type": "Blogpost",
+  "label": "Blogpost example"
+}

@@ -7,9 +7,11 @@
   Gatsby's hello-world starter
 </h1>
 
-Kick off your project with this Remote MDX hello-world boilerplate for sourcing MDX from remote sources and adapt to your needs. This starter ships with the main Gatsby configuration files you might need to get up and running fast with the blazing fast app generator for React.
+Kick off your project with this hello-world boilerplate for sourcing MDX from DFRNT via GraphQL, that you can then  adapt to your needs. This starter ships with the main Gatsby configuration files you might need to get up and running fast with the blazing fast app generator for React when building static websites out of your DFRNT data products.
 
-Getting remote sourcing plugins in place is some work, and for proving the remote MDX functionality, we can create such nodes programmatically. To make it easier to learn and do things step by step.
+Ensure you have the Blogpost type (and all prerequisites) from the DFRNT Schema Library implemented, then copy/paste the contents of blogpost.json into a new record of "Blogpost" type in your instance at [DFRNT.com](https://dfrnt.com). Create your `.env.development` file with your DFRNT API token, and edit the URL to the GraphQL endpoint for your data product (using the free trial version):
+
+* `https://dfrnt.com/api/hosted/:instance/graphql/:instance/:dataproductname`
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
@@ -21,7 +23,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```shell
     # create a new Gatsby site using the mdx-remote-hello-world starter
-    gatsby new my-hello-world-starter https://github.com/dfrnt-com/gatsby-starter-mdx-remote-hello-world
+    gatsby new my-gatsby-starter-dfrnt-graphql https://github.com/dfrnt-com/gatsby-starter-dfrnt-graphql
     ```
 
 1.  **Start developing.**
@@ -29,7 +31,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-mdx-remote-hello-world-starter/
+    cd my-gatsby-starter-dfrnt-graphql/
     gatsby develop
     ```
 
@@ -47,7 +49,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/dfrnt-com/gatsby-starter-mdx-remote-hello-world)
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/dfrnt-com/gatsby-starter-dfrnt-graphql)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
